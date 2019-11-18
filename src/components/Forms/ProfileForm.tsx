@@ -10,7 +10,10 @@ const schema = yup.object({
   lastname: yup.string().required("Last name is required"),
   addressline1: yup.string().required("Address line 1 is required"),
   addressline2: yup.string().required("Address line 2 is required"),
-  email: yup.string().required("Email address is required").email(),
+  email: yup
+    .string()
+    .required("Email address is required")
+    .email(),
   city: yup.string().required("City is required"),
   state: yup.string().required("State is required"),
   postalcode: yup.number().required("Postal code is required"),
